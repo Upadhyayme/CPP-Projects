@@ -2,7 +2,8 @@
 #include<fstream>
 using namespace std;
 
-class temp{
+class temp
+{
     string userName,Email,password;
     string searchName,searchPass,searchEmail;
     fstream file;
@@ -12,7 +13,8 @@ class temp{
     void forgot();
 }obj;
 
-int main(){
+int main()
+{
     char choice;
     cout<<"\n1- Login";
     cout<<"\n2- Sign-Up";
@@ -21,7 +23,8 @@ int main(){
     cout<<"\nEnter Your Choice :: ";
     cin>>choice;
 
-    switch(choice){
+    switch(choice)
+    {
         case '1':
             cin.ignore();
             obj.login();
@@ -40,7 +43,8 @@ int main(){
         defualt: cout<<"Invalid Selection...!";
     }
 }
-void temp :: signUP(){
+void temp :: signUP()
+{
     cout<<"\nEnter Your User Name :: ";
     getline(cin,userName);
     cout<<"Enter Your Email Address :: ";
@@ -52,7 +56,8 @@ void temp :: signUP(){
     file<<userName<<"*"<<Email<<"*"<<password<<endl;
     file.close();
 }
-void temp :: login(){
+void temp :: login()
+{
  
     cout<<"----------LOGIN---------"<<endl;
     cout<<"Enter Your User Name :: "<<endl;
@@ -80,7 +85,8 @@ void temp :: login(){
     }
     file.close();
 }
-void temp :: forgot(){
+void temp :: forgot()
+{
     cout<<"\nEnter Your UserName :: ";
     getline(cin,searchName);
     cout<<"\nEnter Your Email Address :: ";
